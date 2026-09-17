@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bpupadhyaya.github.io/global-monetary-systems-site/sitemap.xml

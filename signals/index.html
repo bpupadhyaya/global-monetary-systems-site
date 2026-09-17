@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signals — Global Monetary Systems</title>
+    <meta name="description" content="A snapshot of live official rates from the ECB, World Bank and BIS — exchange rates, policy rates, and inflation, sourced directly from the institutions that set them.">
+    <link rel="canonical" href="https://bpupadhyaya.github.io/global-monetary-systems-site/signals/">
+    <meta property="og:title" content="Signals — Global Monetary Systems">
+    <meta property="og:description" content="A snapshot of live official rates from the ECB, World Bank and BIS.">
+    <meta property="og:url" content="https://bpupadhyaya.github.io/global-monetary-systems-site/signals/">
+    <meta property="og:image" content="https://bpupadhyaya.github.io/global-monetary-systems-site/assets/img/og-image.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Global Monetary Systems">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0A4A32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="../" class="nav-logo">
+            <img src="../assets/img/favicon.png" alt="" width="32" height="32">
+            Global Monetary Systems
+        </a>
+        <ul class="nav-links">
+            <li><a href="../explore/">Explore</a></li>
+            <li><a href="../glossary/">Glossary</a></li>
+            <li><a href="./">Signals</a></li>
+            <li><a href="../about/">About</a></li>
+            <li><a href="../#download" class="nav-cta">Get the App</a></li>
+        </ul>
+        <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">&#9776;</button>
+    </div>
+</nav>
+<div class="crumbs" role="navigation" aria-label="Breadcrumb"><div class="wrap"><a href="../">Home</a><span class="sep">&rsaquo;</span><span class="current">Signals</span></div></div>
+
+<div class="page-title"><div class="wrap">
+    <h1>Signals</h1>
+    <p class="meta">Official rates, straight from the institutions that set them — no news aggregator in between.</p>
+</div></div>
+
+<section style="padding-top:28px;">
+    <div class="wrap">
+        <div class="notice" style="max-width:760px; margin:0 auto 30px;">
+            This site has no backend and fetches nothing live — the table below is a periodic,
+            hand-refreshed snapshot of the same keyless official APIs the app uses (European
+            Central Bank, World Bank, Bank for International Settlements). The app refreshes
+            these <strong>live, on demand</strong>, plus your own FRED series if you bring a key —
+            see <a href="../about/#live-data">how live data works &rarr;</a>
+        </div>
+
+        <div style="max-width:820px; margin:0 auto; overflow-x:auto;">
+            <table class="signals-table" id="signals-full">
+                <thead><tr><th>Series</th><th>Value</th><th>As of</th><th>Source</th></tr></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <p style="text-align:center; color:var(--ink-faint); font-size:13px; margin-top:16px;" id="retrieved-note"></p>
+    </div>
+</section>
+
+<section class="tint">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="kicker">In the app</span>
+            <h2>Live, auto-refreshing, and linked to context</h2>
+            <p>Every one of these numbers sits inside a sourced topic page in the app, with an "as of" timestamp on every reading.</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <div class="icon">&#128260;</div>
+                <h3>Refresh on demand</h3>
+                <p>One tap re-fetches every series from its official API — no waiting on a site rebuild.</p>
+            </div>
+            <div class="card">
+                <div class="icon gold">&#9200;</div>
+                <h3>Opt-in auto-sync</h3>
+                <p>Turn on Auto-sync and the app refreshes signals itself whenever you have connectivity — off by default.</p>
+            </div>
+            <div class="card">
+                <div class="icon teal">&#128273;</div>
+                <h3>Bring your own FRED key</h3>
+                <p>Add a free FRED API key in Settings to pull in Federal Reserve series the keyless APIs don't cover.</p>
+            </div>
+        </div>
+        <div style="display:flex; justify-content:center; margin-top:34px;">
+            <a class="btn" href="../#download">Get the app &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-inner">
+        <ul class="footer-links">
+            <li><a href="../explore/">Explore</a></li>
+            <li><a href="../glossary/">Glossary</a></li>
+            <li><a href="./">Signals</a></li>
+            <li><a href="../about/">About</a></li>
+            <li><a href="../privacy/">Privacy Policy</a></li>
+            <li><a href="../disclaimer/">Disclaimer</a></li>
+            <li><a href="../support/">Support</a></li>
+            <li><a href="https://equalinformation.com" target="_blank" rel="noopener">EqualInformation</a></li>
+        </ul>
+        <p class="footer-copy">
+            Contact: <a href="mailto:support@equalinformation.com">support@equalinformation.com</a><br>
+            &copy; 2026 EqualInformation, LLC. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+<script>
+fetch('../assets/data/signals.json').then(r => r.json()).then(rows => {
+    const tbody = document.querySelector('#signals-full tbody');
+    let latestRetrieved = '';
+    rows.forEach(s => {
+        const unit = s.unit.startsWith('percent') ? '%' : ` ${s.unit}`;
+        const value = Math.round(s.value * 100) / 100;
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${s.name}</td><td class="value">${value}${unit}</td><td class="asof">${s.date}</td><td class="source">${s.provider}</td>`;
+        tbody.appendChild(tr);
+        if (s.retrieved > latestRetrieved) latestRetrieved = s.retrieved;
+    });
+    if (latestRetrieved) {
+        const d = new Date(latestRetrieved);
+        document.getElementById('retrieved-note').textContent =
+            `Snapshot retrieved ${d.toISOString().slice(0, 10)}.`;
+    }
+}).catch(() => {
+    document.querySelector('#signals-full tbody').innerHTML =
+        '<tr><td colspan="4">Could not load signals right now — please try again shortly.</td></tr>';
+});
+</script>
+
+</body>
+</html>

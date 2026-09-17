@@ -1,0 +1,797 @@
+[
+ {
+  "id": "fifty-percent-rule",
+  "term": "50 Percent Rule",
+  "aliases": [],
+  "essentials": "OFAC's rule that an entity 50% or more owned, directly or indirectly, by one or more blocked persons is itself considered blocked — even if its own name is not on any sanctions list."
+ },
+ {
+  "id": "ample-reserves-regime",
+  "term": "Ample reserves regime",
+  "aliases": [],
+  "essentials": "The Federal Reserve's current operating framework, in which reserves are supplied to the banking system on demand at the policy rate, rather than tightly rationed — since 2020 the US reserve requirement ratio has been zero."
+ },
+ {
+  "id": "article-iv-consultation",
+  "term": "Article IV consultation",
+  "aliases": [
+   "IMF surveillance"
+  ],
+  "essentials": "The IMF's examination of each member's economy, usually annual, under Article IV of its Articles of Agreement, publishing a staff report and the Executive Board's assessment."
+ },
+ {
+  "id": "balance-of-payments",
+  "term": "Balance of payments",
+  "aliases": [
+   "BoP",
+   "current account",
+   "capital account",
+   "financial account"
+  ],
+  "essentials": "The double-entry accounting record of a country's transactions with the rest of the world, which always balances by construction — current and capital account balances mirror the financial account."
+ },
+ {
+  "id": "bank-run",
+  "term": "Bank run",
+  "aliases": [
+   "liquidity spiral"
+  ],
+  "essentials": "When depositors withdraw from a bank because they expect other depositors to withdraw, which can fail an otherwise solvent bank purely on that self-fulfilling expectation."
+ },
+ {
+  "id": "policy-rate-database",
+  "term": "BIS central bank policy rates database",
+  "aliases": [],
+  "essentials": "The Bank for International Settlements' own compiled dataset of policy rates across central banks worldwide, updated daily."
+ },
+ {
+  "id": "bitcoin-as-money",
+  "term": "Bitcoin",
+  "aliases": [
+   "cryptocurrency"
+  ],
+  "essentials": "A currency issued by software rather than a state, created by a 2008 whitepaper describing a peer-to-peer electronic cash system with a fixed, algorithmically-set supply."
+ },
+ {
+  "id": "bitcoin-economics-survey",
+  "term": "Bitcoin, Economics, Technology, and Governance",
+  "aliases": [],
+  "essentials": "The standard academic entry point for Bitcoin's economics, technology and governance, surveying the design for a general economics audience."
+ },
+ {
+  "id": "black-wednesday",
+  "term": "Black Wednesday",
+  "aliases": [
+   "sterling ERM exit",
+   "1992 ERM crisis"
+  ],
+  "essentials": "16 September 1992, when the UK suspended sterling's membership of the European Exchange Rate Mechanism after \"heavy official purchases of sterling\" failed to hold the currency inside its band."
+ },
+ {
+  "id": "bretton-woods",
+  "term": "Bretton Woods system",
+  "aliases": [
+   "Bretton Woods"
+  ],
+  "essentials": "The 1944 agreement that pegged currencies to the US dollar, and the dollar to gold, until 1971."
+ },
+ {
+  "id": "business-cycle-dating",
+  "term": "Business Cycle Dating Committee",
+  "aliases": [
+   "NBER dating"
+  ],
+  "essentials": "The National Bureau of Economic Research body whose announcements are the official record of when a US recession began and ended."
+ },
+ {
+  "id": "central-bank-balance-sheet",
+  "term": "Central bank balance sheet",
+  "aliases": [
+   "H.4.1",
+   "weekly financial statement"
+  ],
+  "essentials": "A central bank's own published record of its assets (bond holdings, lending) and liabilities (currency in circulation, bank reserves), typically disclosed weekly."
+ },
+ {
+  "id": "cbcc",
+  "term": "Central bank cryptocurrency",
+  "aliases": [
+   "CBCC"
+  ],
+  "essentials": "An early BIS term for what is now generally called a central bank digital currency, from the BIS's 2017 analysis comparing crypto-style issuance and settlement to central-bank money."
+ },
+ {
+  "id": "cbdc",
+  "term": "Central bank digital currency",
+  "aliases": [
+   "CBDC",
+   "retail CBDC",
+   "wholesale CBDC"
+  ],
+  "essentials": "A digital claim directly on a central bank — unlike ordinary digital money in a bank account, which is a claim on a commercial bank and carries that bank's credit risk."
+ },
+ {
+  "id": "central-bank-independence",
+  "term": "Central bank independence",
+  "aliases": [],
+  "essentials": "The principle that a central bank sets interest rates without day-to-day direction from elected government, to keep monetary policy free of short-term political pressure."
+ },
+ {
+  "id": "central-bank-independence-index",
+  "term": "Central bank independence index",
+  "aliases": [
+   "legal independence index"
+  ],
+  "essentials": "Cross-country indices scoring how legally independent a central bank is from its government; studies using them found more independent central banks associated with lower, less variable inflation and no cost to growth."
+ },
+ {
+  "id": "conservative-central-banker",
+  "term": "Conservative central banker",
+  "aliases": [
+   "Rogoff conservative central banker"
+  ],
+  "essentials": "The result that delegating monetary policy to a central banker who weights inflation more heavily than society as a whole does can reduce the inflation bias that comes from time inconsistency."
+ },
+ {
+  "id": "inflation-readings",
+  "term": "Consumer price index",
+  "aliases": [
+   "CPI",
+   "core inflation"
+  ],
+  "essentials": "The standard measure of inflation, tracking the price of a fixed basket of goods and services over time; \"core\" inflation excludes volatile food and energy prices."
+ },
+ {
+  "id": "correspondent-banking",
+  "term": "Correspondent banking",
+  "aliases": [
+   "correspondent bank",
+   "nostro account",
+   "vostro account"
+  ],
+  "essentials": "How a payment actually crosses a border — a chain of banks holding accounts with each other, with the payment message travelling separately from the money itself."
+ },
+ {
+  "id": "currency-board",
+  "term": "Currency board",
+  "aliases": [
+   "linked exchange rate"
+  ],
+  "essentials": "An exchange-rate regime in which a currency is fully backed by, and fixed to, a foreign reserve currency, with no independent monetary policy — Hong Kong's linked exchange rate system is a documented example."
+ },
+ {
+  "id": "currency-crisis",
+  "term": "Currency crisis",
+  "aliases": [
+   "speculative attack"
+  ],
+  "essentials": "An event in which a speculative attack forces a fixed or managed exchange rate to break; economists group the explanations into three model \"generations\" built for different real episodes."
+ },
+ {
+  "id": "exchange-rate-classification",
+  "term": "De facto exchange-rate classification",
+  "aliases": [
+   "Reinhart-Rogoff classification"
+  ],
+  "essentials": "A reclassification of countries' exchange-rate regimes based on what currencies actually did, rather than what governments officially announced — often finding a country's real regime differed from its stated one."
+ },
+ {
+  "id": "correspondent-banking-retreat",
+  "term": "De-risking",
+  "aliases": [
+   "correspondent banking retreat"
+  ],
+  "essentials": "The documented decline in active correspondent-banking relationships — about a fifth between 2011 and 2018 even as payment volumes rose — concentrated in small, poor and higher-risk jurisdictions, driven by compliance cost and risk aversion."
+ },
+ {
+  "id": "deposit-beta",
+  "term": "Deposit beta",
+  "aliases": [],
+  "essentials": "How much of a policy-rate change a bank actually passes through to what it pays savers; ECB research found roughly 68% reaches new household term deposits but only 23% reaches ordinary overnight deposits."
+ },
+ {
+  "id": "deposit-insurance",
+  "term": "Deposit insurance",
+  "aliases": [],
+  "essentials": "A guarantee, up to a set limit, that a depositor's money is protected if their bank fails — removing the incentive to be first in line during a run."
+ },
+ {
+  "id": "imf-programs-debate",
+  "term": "Do IMF programs work?",
+  "aliases": [],
+  "essentials": "An unsettled empirical debate — one study finds program participation associated with lower growth in the years after, another finds effects depend on how well a country complies with its conditions — complicated by the fact that countries in trouble are the ones that borrow."
+ },
+ {
+  "id": "dollar-invoicing-history",
+  "term": "Dollar dominance in trade invoicing",
+  "aliases": [
+   "Gopinath dollar invoicing"
+  ],
+  "essentials": "Research documenting how much of global trade is invoiced in a small number of \"vehicle\" currencies, dominated by the US dollar, independent of which countries are actually trading with each other."
+ },
+ {
+  "id": "bernanke-mishkin-inflation-targeting",
+  "term": "Early inflation-targeting adopters",
+  "aliases": [],
+  "essentials": "New Zealand adopted the first formal inflation target in 1990, followed by Canada in 1991 and the United Kingdom in 1992; by the late 1990s the framework was standard among advanced economies."
+ },
+ {
+  "id": "economic-and-monetary-union",
+  "term": "Economic and Monetary Union",
+  "aliases": [
+   "EMU"
+  ],
+  "essentials": "The European Union framework under which member states adopt the euro and cede national monetary policy to the European Central Bank."
+ },
+ {
+  "id": "proof-of-work-limits",
+  "term": "Economic limits of proof-of-work",
+  "aliases": [],
+  "essentials": "The result that a proof-of-work system's security rests on the cost of attacking it, which in turn implies a mathematical limit on the value such a system can safely secure."
+ },
+ {
+  "id": "euro-reference-rate",
+  "term": "Euro foreign exchange reference rate",
+  "aliases": [
+   "ECB reference rate"
+  ],
+  "essentials": "The European Central Bank's own daily published exchange rates between the euro and other major currencies."
+ },
+ {
+  "id": "erm",
+  "term": "Exchange Rate Mechanism",
+  "aliases": [
+   "ERM"
+  ],
+  "essentials": "The system that pegged European currencies to each other within set bands before the euro, and from which the UK and Italy were forced out in September 1992."
+ },
+ {
+  "id": "exchange-rate-pass-through",
+  "term": "Exchange-rate pass-through",
+  "aliases": [
+   "pass-through"
+  ],
+  "essentials": "How much of a currency's move actually reaches domestic prices; a BIS study of several industrialised economies found the overall effect \"modest,\" but stronger in countries with a larger import share."
+ },
+ {
+  "id": "exchange-rate-regimes",
+  "term": "Exchange-rate regime",
+  "aliases": [
+   "currency regime",
+   "peg",
+   "float",
+   "fixed exchange rate",
+   "floating exchange rate"
+  ],
+  "essentials": "The rule a country chooses for how its currency's price is set, from a free float to giving up its own currency entirely."
+ },
+ {
+  "id": "fomc",
+  "term": "Federal Open Market Committee",
+  "aliases": [
+   "FOMC"
+  ],
+  "essentials": "The Federal Reserve committee that meets eight times a year to set the US policy rate."
+ },
+ {
+  "id": "sanctions-and-money",
+  "term": "Financial sanctions",
+  "aliases": [
+   "OFAC",
+   "SDN list",
+   "asset freeze",
+   "blocked persons"
+  ],
+  "essentials": "Legal measures — asset freezes and trade restrictions — that a government uses to block transactions with a named person, entity or jurisdiction."
+ },
+ {
+  "id": "flexible-average-inflation-targeting",
+  "term": "Flexible average inflation targeting",
+  "aliases": [
+   "FAIT"
+  ],
+  "essentials": "The framework the Federal Reserve adopted in 2020, aiming for inflation moderately above its 2% target for some time after periods running below it, to average out over time rather than target every period identically."
+ },
+ {
+  "id": "forward-guidance",
+  "term": "Forward guidance",
+  "aliases": [],
+  "essentials": "A central bank telling the public what it expects to do with its policy rate in the future, which can move longer-term borrowing costs before any decision is actually made."
+ },
+ {
+  "id": "cross-border-building-blocks",
+  "term": "G20 cross-border building blocks",
+  "aliases": [
+   "19 building blocks"
+  ],
+  "essentials": "The set of technical work areas the Financial Stability Board organised its cross-border payments improvement programme around, each targeting a specific documented friction — cost, speed, access or transparency."
+ },
+ {
+  "id": "cross-border-payments-targets",
+  "term": "G20 cross-border payments targets",
+  "aliases": [
+   "FSB roadmap"
+  ],
+  "essentials": "Numerical targets the Financial Stability Board set for 2027 — a global average cost of no more than 1% for retail payments (3% for remittances), 75% of payments credited within one hour, plus access and transparency goals."
+ },
+ {
+  "id": "remittance-principles",
+  "term": "General principles for international remittance services",
+  "aliases": [],
+  "essentials": "Joint CPMI–World Bank principles describing the chain a remittance passes through — sending agent, settlement between institutions, paying agent — and what cost and transparency disclosure should look like."
+ },
+ {
+  "id": "fed-gold-certificates",
+  "term": "Gold certificates",
+  "aliases": [],
+  "essentials": "The Federal Reserve does not own gold itself; the US Treasury does, and the Fed holds gold certificates against it — one reason gold's price can still move on shifts in currency confidence even though no currency is convertible into it."
+ },
+ {
+  "id": "gold-reserve-act-1934",
+  "term": "Gold Reserve Act of 1934",
+  "aliases": [
+   "1933 gold recall"
+  ],
+  "essentials": "The United States suspended domestic gold convertibility for citizens in 1933 and revalued gold from $20.67 to $35 an ounce in 1934, a real, dated step in the gold standard's interwar unwinding."
+ },
+ {
+  "id": "gold-today",
+  "term": "Gold reserves",
+  "aliases": [
+   "official gold holdings"
+  ],
+  "essentials": "Gold central banks hold as a reserve asset today, valued daily against the LBMA Gold Price and reported to the IMF, with no currency convertible into it anymore."
+ },
+ {
+  "id": "gold-standard",
+  "term": "Gold standard",
+  "aliases": [],
+  "essentials": "The system, roughly 1870 to 1914, in which a currency was defined as a fixed weight of gold and could be exchanged for it on demand."
+ },
+ {
+  "id": "gold-exchange-standard",
+  "term": "Gold-exchange standard",
+  "aliases": [
+   "interwar gold standard"
+  ],
+  "essentials": "The weaker, revived form of the gold standard in the 1920s, in which central banks held other countries' currencies as reserves alongside gold; when the Depression came, the commitment to gold forced monetary contraction, and countries that left gold early recovered sooner."
+ },
+ {
+  "id": "golden-fetters",
+  "term": "Golden fetters",
+  "aliases": [],
+  "essentials": "The thesis that the gold standard's rigid rules worsened and spread the Great Depression, forcing countries to tighten monetary policy exactly when their economies needed the opposite."
+ },
+ {
+  "id": "great-inflation",
+  "term": "Great Inflation",
+  "aliases": [],
+  "essentials": "The Federal Reserve's own name for the 1965–1982 US inflation episode, ended only after the FOMC's October 1979 shift to explicitly targeting money-stock growth — a sustained policy-framework change, not something that resolved on its own."
+ },
+ {
+  "id": "hawala",
+  "term": "Hawala",
+  "aliases": [
+   "hundi",
+   "informal value transfer"
+  ],
+  "essentials": "A way of moving money across borders on trust between dealers, with no money actually crossing."
+ },
+ {
+  "id": "rate-cycle",
+  "term": "Hiking cycle",
+  "aliases": [
+   "easing cycle",
+   "tightening cycle"
+  ],
+  "essentials": "A run of a central bank's decisions in one direction — a sequence of rate increases (a hiking cycle) or decreases (an easing cycle) — before it changes course."
+ },
+ {
+  "id": "reserve-currency-history",
+  "term": "How global currencies have changed",
+  "aliases": [
+   "Eichengreen reserve currency history"
+  ],
+  "essentials": "Long-run historical research on how the composition of the world's reserve currencies has shifted over time, and what has historically driven a currency's rise or fall in international use."
+ },
+ {
+  "id": "imf-conditionality",
+  "term": "IMF conditionality",
+  "aliases": [
+   "conditionality",
+   "IMF program"
+  ],
+  "essentials": "Policy changes a country agrees to in exchange for IMF lending, released in tranches as the country meets the agreed conditions."
+ },
+ {
+  "id": "imf-governance",
+  "term": "IMF governance",
+  "aliases": [
+   "Board of Governors",
+   "Executive Board"
+  ],
+  "essentials": "A Board of Governors — one per member, usually the finance minister or central bank governor — sits above an Executive Board that takes day-to-day decisions; voting power follows each member's quota."
+ },
+ {
+  "id": "imf-quota",
+  "term": "IMF quota",
+  "aliases": [
+   "quota"
+  ],
+  "essentials": "The amount a country pays into the IMF, which determines how much it can borrow and how many votes it holds — broadly reflecting the size of its economy."
+ },
+ {
+  "id": "impossible-trinity",
+  "term": "Impossible trinity",
+  "aliases": [
+   "trilemma",
+   "monetary trilemma"
+  ],
+  "essentials": "The proposition that a country cannot simultaneously have a fixed exchange rate, free capital movement, and an independent monetary policy — it must give up one of the three."
+ },
+ {
+  "id": "inflation-targeting",
+  "term": "Inflation targeting",
+  "aliases": [
+   "inflation target"
+  ],
+  "essentials": "The framework in which a central bank commits to a numerical inflation goal, usually 2%, and explains its decisions against it."
+ },
+ {
+  "id": "intermediation-of-loanable-funds",
+  "term": "Intermediation of loanable funds",
+  "aliases": [
+   "financing through money creation"
+  ],
+  "essentials": "Two competing models of what a bank does when it lends — one where a bank merely channels existing savings, one where lending itself creates new deposits — with materially different predictions for how bank lending affects the economy."
+ },
+ {
+  "id": "the-imf",
+  "term": "International Monetary Fund",
+  "aliases": [
+   "IMF"
+  ],
+  "essentials": "A club of almost every country in the world, created at Bretton Woods in 1944, that pools members' quota payments and lends to a member that cannot pay for its imports or service its foreign debt."
+ },
+ {
+  "id": "large-scale-asset-purchases",
+  "term": "Large-scale asset purchases",
+  "aliases": [
+   "LSAP"
+  ],
+  "essentials": "The Federal Reserve's own term for quantitative easing; it ran three rounds from late 2008 and a fourth from March 2020, taking its balance sheet from under $1 trillion to nearly $9 trillion."
+ },
+ {
+  "id": "lender-of-last-resort",
+  "term": "Lender of last resort",
+  "aliases": [
+   "discount window"
+  ],
+  "essentials": "A central bank facility letting a bank borrow against collateral during a liquidity squeeze, rather than being forced to sell assets into a falling market to meet withdrawals."
+ },
+ {
+  "id": "mobile-money",
+  "term": "Mobile money",
+  "aliases": [
+   "e-float",
+   "mobile wallet",
+   "M-Pesa"
+  ],
+  "essentials": "A phone-based e-money account, moved between phones and converted to and from cash through a network of local agents rather than bank branches."
+ },
+ {
+  "id": "monetary-aggregates",
+  "term": "Monetary aggregates",
+  "aliases": [
+   "M1",
+   "M2",
+   "M3",
+   "money supply"
+  ],
+  "essentials": "Official measures of the money supply, defined differently by jurisdiction; US definitions changed materially in 2020 when savings deposits were reclassified into M1, so long time series must be read with that definitional break in mind."
+ },
+ {
+  "id": "fed-digital-money-paper",
+  "term": "Money and Payments discussion paper",
+  "aliases": [],
+  "essentials": "The Federal Reserve's own 2022 discussion paper setting out the possible benefits and risks of a US central bank digital currency, and how it would compare with existing digital money."
+ },
+ {
+  "id": "money-creation",
+  "term": "Money creation",
+  "aliases": [
+   "fractional reserve banking",
+   "bank lending"
+  ],
+  "essentials": "The process by which commercial banks create new deposits — new money — the moment they make a loan, rather than simply lending out money customers have already deposited."
+ },
+ {
+  "id": "money-laundering",
+  "term": "Money laundering",
+  "aliases": [
+   "AML",
+   "anti-money laundering"
+  ],
+  "essentials": "Disguising the origin of illegally obtained money so it appears to come from a legitimate source; a documented concern for informal transfer systems that regulators track alongside terrorist-financing risk."
+ },
+ {
+  "id": "mortgage-refixing-cliff",
+  "term": "Mortgage refixing cliff",
+  "aliases": [
+   "fixed-rate expiry"
+  ],
+  "essentials": "The staggered way higher interest rates reach fixed-rate mortgage holders — only as each household's fixed deal expires and they roll onto a new, higher rate — documented by the Bank of England during the 2022–23 tightening cycle."
+ },
+ {
+  "id": "new-keynesian-model",
+  "term": "New Keynesian model",
+  "aliases": [
+   "interest-rate rule"
+  ],
+  "essentials": "The standard modern framework for interest-rate policy, in which a credible inflation objective anchors the public's expectations and shapes how the economy responds to a rate change."
+ },
+ {
+  "id": "nixon-shock",
+  "term": "Nixon shock",
+  "aliases": [
+   "end of gold convertibility"
+  ],
+  "essentials": "The August 1971 decision that ended the US dollar's convertibility into gold and, within two years, the era of fixed exchange rates."
+ },
+ {
+  "id": "nostro-account",
+  "term": "Nostro account",
+  "aliases": [
+   "vostro account",
+   "correspondent account"
+  ],
+  "essentials": "An account a bank holds at a partner bank abroad, pre-funded so cross-border payments can be settled by adjusting balances rather than moving physical cash."
+ },
+ {
+  "id": "pepp",
+  "term": "Pandemic Emergency Purchase Programme",
+  "aliases": [
+   "PEPP"
+  ],
+  "essentials": "The European Central Bank's emergency bond-buying programme launched in 2020, alongside its longer-running asset purchase programme, as part of the pandemic monetary-policy response."
+ },
+ {
+  "id": "policy-rate",
+  "term": "Policy rate",
+  "aliases": [
+   "policy interest rate",
+   "base rate",
+   "bank rate",
+   "federal funds rate"
+  ],
+  "essentials": "The interest rate a central bank sets to steer borrowing costs across an economy."
+ },
+ {
+  "id": "portfolio-rebalancing-channel",
+  "term": "Portfolio rebalancing channel",
+  "aliases": [
+   "signalling channel"
+  ],
+  "essentials": "The main documented channel by which quantitative easing reaches asset prices beyond the bonds actually purchased — investors who sold bonds to the central bank redeploy that money into other assets, pushing up their prices too."
+ },
+ {
+  "id": "qe-effectiveness-estimate",
+  "term": "QE's effective rate-cut equivalent",
+  "aliases": [
+   "shadow rate"
+  ],
+  "essentials": "A 2020 review by former Fed Chair Ben Bernanke argues that quantitative easing and forward guidance together provided the equivalent of roughly three percentage points of additional policy-rate cuts, at a time the actual rate was stuck near zero."
+ },
+ {
+  "id": "quantitative-easing",
+  "term": "Quantitative easing",
+  "aliases": [
+   "QE",
+   "asset purchases",
+   "large-scale asset purchases"
+  ],
+  "essentials": "A central bank buying large amounts of bonds with newly created reserves to push down longer-term interest rates once its policy rate is already near zero."
+ },
+ {
+  "id": "quantitative-tightening",
+  "term": "Quantitative tightening",
+  "aliases": [
+   "QT",
+   "balance-sheet runoff",
+   "balance-sheet reduction"
+  ],
+  "essentials": "A central bank letting its bond holdings shrink — actively or by not reinvesting maturing bonds — reversing quantitative easing."
+ },
+ {
+  "id": "real-earnings",
+  "term": "Real earnings",
+  "aliases": [
+   "real wages",
+   "nominal versus real"
+  ],
+  "essentials": "Wage growth after adjusting for inflation using the Consumer Price Index; real earnings can fall even while nominal pay rises, whenever prices rise faster than the pay increase."
+ },
+ {
+  "id": "currency-signals",
+  "term": "Real effective exchange rate",
+  "aliases": [
+   "REER",
+   "effective exchange rate"
+  ],
+  "essentials": "A currency's exchange rate against a broad, trade-weighted basket of its trading partners' currencies, adjusted for inflation differences — a more informative signal than any single bilateral rate."
+ },
+ {
+  "id": "remittances",
+  "term": "Remittance",
+  "aliases": [
+   "remittances",
+   "remittance corridor"
+  ],
+  "essentials": "Money that a migrant worker sends home to family — for many countries, a larger and steadier inflow than foreign investment or foreign aid."
+ },
+ {
+  "id": "remittance-corridor",
+  "term": "Remittance corridor",
+  "aliases": [
+   "remittance price"
+  ],
+  "essentials": "A specific sending-country-to-receiving-country pair for migrant remittances, each with its own set of transfer routes, costs and typical speeds."
+ },
+ {
+  "id": "remittances-and-development",
+  "term": "Remittances and development",
+  "aliases": [],
+  "essentials": "The standard academic survey on what drives migrants to remit, how transfers respond to shocks at home, and the evidence on effects on poverty, schooling and investment in receiving countries."
+ },
+ {
+  "id": "reserve-adequacy",
+  "term": "Reserve adequacy",
+  "aliases": [],
+  "essentials": "The IMF's own framework for judging whether a country's foreign-currency reserve level is unusual given its trade, debt and capital-flow exposure — the reference most central banks and the IMF itself use."
+ },
+ {
+  "id": "reserve-currencies",
+  "term": "Reserve currency",
+  "aliases": [
+   "reserve currencies"
+  ],
+  "essentials": "A currency that other countries' central banks hold, invoice in and borrow in as part of their own official reserves."
+ },
+ {
+  "id": "sdg-remittance-target",
+  "term": "SDG 10.c remittance target",
+  "aliases": [
+   "three percent target"
+  ],
+  "essentials": "The United Nations' Sustainable Development Goal target to cut the average cost of sending remittances to below 3% by 2030, with no corridor above 5% — against a global average that has hovered around 6%."
+ },
+ {
+  "id": "second-generation-currency-crisis",
+  "term": "Self-fulfilling currency crisis",
+  "aliases": [
+   "second-generation crisis model"
+  ],
+  "essentials": "Maurice Obstfeld's model treats a currency peg as something a government could defend but might choose not to if the cost outweighs the benefit — meaning an attack can become self-fulfilling once enough speculators believe the government will abandon the peg."
+ },
+ {
+  "id": "imf-history",
+  "term": "Silent Revolution",
+  "aliases": [
+   "IMF history"
+  ],
+  "essentials": "The IMF's own multi-volume history, documenting its transformation from guardian of the Bretton Woods pegs to crisis lender after 1971, with one volume covering the 1980s debt crises specifically."
+ },
+ {
+  "id": "sdr",
+  "term": "Special Drawing Right",
+  "aliases": [
+   "SDR"
+  ],
+  "essentials": "An IMF-created reserve asset — neither a currency nor a claim on the IMF, but a potential claim on other members' currencies — valued on a basket of five currencies."
+ },
+ {
+  "id": "stablecoins",
+  "term": "Stablecoin",
+  "aliases": [
+   "fiat-backed stablecoin",
+   "algorithmic stablecoin",
+   "unbacked stablecoin"
+  ],
+  "essentials": "A cryptoasset designed to hold a steady value, usually pegged to a currency like the US dollar, through claimed reserves or an algorithm."
+ },
+ {
+  "id": "swift",
+  "term": "SWIFT",
+  "aliases": [
+   "Society for Worldwide Interbank Financial Telecommunication",
+   "SWIFT network"
+  ],
+  "essentials": "A global cooperative messaging network banks use to send payment instructions to each other; SWIFT itself states it \"does not actually move money\" — funds move separately, through correspondent banking."
+ },
+ {
+  "id": "swift-gpi",
+  "term": "SWIFT gpi",
+  "aliases": [
+   "global payments innovation"
+  ],
+  "essentials": "SWIFT's own service for end-to-end tracking of a payment instruction as it moves between the banks in a cross-border chain."
+ },
+ {
+  "id": "snb-franc-floor",
+  "term": "Swiss franc floor",
+  "aliases": [
+   "SNB 2015"
+  ],
+  "essentials": "The Swiss National Bank's minimum exchange-rate policy for the franc against the euro, discontinued without warning in January 2015, causing the franc to surge — a documented case of a currency appreciation, not a fall, following a sudden policy exit."
+ },
+ {
+  "id": "symmetric-inflation-target",
+  "term": "Symmetric inflation target",
+  "aliases": [],
+  "essentials": "The ECB's 2021 strategy revision replacing its \"below, but close to, 2%\" formulation with a symmetric 2% target, treating undershoots and overshoots of the target as equally undesirable."
+ },
+ {
+  "id": "financial-stress",
+  "term": "Systemic risk exception",
+  "aliases": [],
+  "essentials": "A legal mechanism letting the FDIC protect all deposits at a failed bank — not just the standard $250,000 limit — as it did for Silicon Valley Bank in March 2023."
+ },
+ {
+  "id": "fed-2-percent-goal",
+  "term": "The Fed's 2% goal",
+  "aliases": [],
+  "essentials": "The Federal Reserve's January 2012 statement was the first time it publicly named an explicit numerical inflation goal of 2%."
+ },
+ {
+  "id": "imf-digital-money-note",
+  "term": "The Rise of Digital Money",
+  "aliases": [],
+  "essentials": "An IMF staff note assessing new forms of digital money, including the risks the Fund identified in countries that adopted a cryptocurrency as legal tender."
+ },
+ {
+  "id": "time-inconsistency",
+  "term": "Time inconsistency",
+  "aliases": [],
+  "essentials": "The problem that a policymaker able to re-optimise every period is tempted to create surprise inflation for a short-term gain; the public anticipates it, and the result is higher inflation with no lasting output benefit."
+ },
+ {
+  "id": "transmission-mechanism",
+  "term": "Transmission mechanism",
+  "aliases": [
+   "monetary transmission"
+  ],
+  "essentials": "The chain by which a central bank's rate decision reaches the real economy; central banks themselves describe it as working through \"long, variable and uncertain time lags.\""
+ },
+ {
+  "id": "core-inflation-measures",
+  "term": "Trimmed-mean inflation",
+  "aliases": [
+   "underlying inflation",
+   "core measures"
+  ],
+  "essentials": "A core-inflation measure that removes a price index's most volatile categories, argued to be a less noisy signal of the persistent, policy-relevant component of price growth than the headline figure alone."
+ },
+ {
+  "id": "vehicle-currency",
+  "term": "Vehicle currency",
+  "aliases": [
+   "invoicing currency"
+  ],
+  "essentials": "A currency used to price trade between two countries even though it is neither country's own currency — a BIS paper notes \"international trade is mostly priced in a few key vehicle currencies,\" which is why a move in that third currency can matter to a trade neither side is directly exposed to."
+ },
+ {
+  "id": "yield-curve",
+  "term": "Yield curve",
+  "aliases": [
+   "inverted yield curve",
+   "term spread"
+  ],
+  "essentials": "A plot of a government's bond yields against how long until each bond matures; when a short-dated bond yields more than a long-dated one, the curve is \"inverted.\""
+ },
+ {
+  "id": "recession-signals",
+  "term": "Yield-curve inversion",
+  "aliases": [],
+  "essentials": "When a short-dated government bond yields more than a long-dated one; the New York Fed's own account states this has preceded every US recession since the 1950s, with a lead time that has varied episode to episode."
+ }
+]

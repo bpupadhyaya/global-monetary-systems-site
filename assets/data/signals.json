@@ -1,0 +1,56 @@
+[
+ {
+  "id": "ecb.eur-usd",
+  "name": "EUR / USD reference rate",
+  "unit": "USD per EUR",
+  "provider": "European Central Bank",
+  "value": 1.1539,
+  "date": "2026-09-15",
+  "retrieved": "2026-09-15T21:24:45Z"
+ },
+ {
+  "id": "ecb.deposit-facility-rate",
+  "name": "ECB deposit facility rate",
+  "unit": "percent",
+  "provider": "European Central Bank",
+  "value": 2.5,
+  "date": "2026-09-16",
+  "retrieved": "2026-09-15T21:24:45Z"
+ },
+ {
+  "id": "worldbank.us-cpi-inflation",
+  "name": "United States inflation, consumer prices (annual)",
+  "unit": "percent, annual average",
+  "provider": "World Bank",
+  "value": 2.94952520485207,
+  "date": "2024",
+  "retrieved": "2026-09-15T21:24:45Z"
+ },
+ {
+  "id": "bis.policy-rate-us",
+  "name": "United States policy rate (Fed funds target midpoint)",
+  "unit": "percent",
+  "provider": "Bank for International Settlements",
+  "value": 3.625,
+  "date": "2026-09-08",
+  "retrieved": "2026-09-15T21:24:45Z"
+ },
+ {
+  "id": "bis.policy-rate-gb",
+  "name": "United Kingdom Bank Rate",
+  "unit": "percent",
+  "provider": "Bank for International Settlements",
+  "value": 3.75,
+  "date": "2026-09-07",
+  "retrieved": "2026-09-15T21:24:45Z"
+ },
+ {
+  "id": "bis.policy-rate-jp",
+  "name": "Japan policy rate",
+  "unit": "percent",
+  "provider": "Bank for International Settlements",
+  "value": 1.0,
+  "date": "2026-09-08",
+  "retrieved": "2026-09-15T21:24:45Z"
+ }
+]

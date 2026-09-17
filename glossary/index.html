@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossary — Global Monetary Systems</title>
+    <meta name="description" content="100 monetary-system terms, plain-language definitions, free and public — from policy rate to hawala to the Nixon shock.">
+    <link rel="canonical" href="https://bpupadhyaya.github.io/global-monetary-systems-site/glossary/">
+    <meta property="og:title" content="Glossary — Global Monetary Systems">
+    <meta property="og:description" content="100 monetary-system terms, plain-language definitions, free and public.">
+    <meta property="og:url" content="https://bpupadhyaya.github.io/global-monetary-systems-site/glossary/">
+    <meta property="og:image" content="https://bpupadhyaya.github.io/global-monetary-systems-site/assets/img/og-image.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Global Monetary Systems">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0A4A32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="../" class="nav-logo">
+            <img src="../assets/img/favicon.png" alt="" width="32" height="32">
+            Global Monetary Systems
+        </a>
+        <ul class="nav-links">
+            <li><a href="../explore/">Explore</a></li>
+            <li><a href="./">Glossary</a></li>
+            <li><a href="../signals/">Signals</a></li>
+            <li><a href="../about/">About</a></li>
+            <li><a href="../#download" class="nav-cta">Get the App</a></li>
+        </ul>
+        <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">&#9776;</button>
+    </div>
+</nav>
+<div class="crumbs" role="navigation" aria-label="Breadcrumb"><div class="wrap"><a href="../">Home</a><span class="sep">&rsaquo;</span><span class="current">Glossary</span></div></div>
+
+<div class="page-title"><div class="wrap">
+    <h1>Glossary</h1>
+    <p class="meta">100 terms, plain language, free and public — the same Essentials definitions as in the app.</p>
+</div></div>
+
+<section style="padding-top:28px;">
+    <div class="wrap">
+        <div class="glossary-toolbar">
+            <input type="search" id="glossary-search" placeholder="Search terms — try “hawala” or “SDR”" autocomplete="off">
+        </div>
+        <p class="glossary-count" id="glossary-count"></p>
+        <div class="notice" style="max-width:720px; margin:0 auto 34px;">
+            Every term here is free. In the app, tap any term for its <strong>Applied</strong>
+            definition (how practitioners actually use it) and <strong>Research</strong>
+            definition (the formal literature) — each with tappable, full citations, part of
+            <a href="../about/#pro">Global Monetary Systems Pro</a>.
+        </div>
+        <dl class="glossary-grid" id="glossary-list"></dl>
+    </div>
+</section>
+
+<section class="tint">
+    <div class="wrap" style="text-align:center;">
+        <div class="section-head">
+            <span class="kicker">Want the full depth?</span>
+            <h2>Every term, sourced and tappable, in the app</h2>
+            <p>Applied and Research definitions, full citations that open in-app, and an on-device AI that can explain any of these in context.</p>
+        </div>
+        <a class="btn" href="../#download">Get the app &rarr;</a>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-inner">
+        <ul class="footer-links">
+            <li><a href="../explore/">Explore</a></li>
+            <li><a href="./">Glossary</a></li>
+            <li><a href="../signals/">Signals</a></li>
+            <li><a href="../about/">About</a></li>
+            <li><a href="../privacy/">Privacy Policy</a></li>
+            <li><a href="../disclaimer/">Disclaimer</a></li>
+            <li><a href="../support/">Support</a></li>
+            <li><a href="https://equalinformation.com" target="_blank" rel="noopener">EqualInformation</a></li>
+        </ul>
+        <p class="footer-copy">
+            Contact: <a href="mailto:support@equalinformation.com">support@equalinformation.com</a><br>
+            &copy; 2026 EqualInformation, LLC. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+<script>
+fetch('../assets/data/glossary.json').then(r => r.json()).then(terms => {
+    const list = document.getElementById('glossary-list');
+    const count = document.getElementById('glossary-count');
+    const search = document.getElementById('glossary-search');
+
+    terms.forEach(t => {
+        const div = document.createElement('div');
+        div.className = 'term';
+        div.dataset.q = (t.term + ' ' + (t.aliases || []).join(' ') + ' ' + t.essentials).toLowerCase();
+        const aka = (t.aliases && t.aliases.length) ? ` <span class="aka">(${t.aliases.join(', ')})</span>` : '';
+        div.innerHTML = `<dt>${t.term}${aka}</dt><dd>${t.essentials}</dd>`;
+        list.appendChild(div);
+    });
+
+    function render() {
+        const q = search.value.trim().toLowerCase();
+        let shown = 0;
+        list.querySelectorAll('.term').forEach(el => {
+            const match = !q || el.dataset.q.includes(q);
+            el.classList.toggle('hide', !match);
+            if (match) shown++;
+        });
+        count.textContent = q ? `${shown} of ${terms.length} terms` : `${terms.length} terms`;
+    }
+    search.addEventListener('input', render);
+    render();
+}).catch(() => {
+    document.getElementById('glossary-list').innerHTML = '<p>Could not load the glossary — please try again shortly.</p>';
+});
+</script>
+
+</body>
+</html>
