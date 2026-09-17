@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bpupadhyaya.github.io/global-monetary-systems-site/sitemap.xml
+Sitemap: https://equalinformation.com/global-monetary-systems-site/sitemap.xml

@@ -48,12 +48,16 @@ materially (check the app repo's `CLAUDE.md` status line and `release-ops/global
 
 ## One-time GitHub Pages setup
 
-1. **GitHub → repo Settings → Pages**: Source = `main` branch, `/ (root)`.
-2. No custom domain yet — "Global Monetary Systems" is still a working title
-   (`CLAUDE.md` in the app repo; `docs/RECIPES.md` has the rename procedure), so this site
-   deploys for now at the default project-page URL:
-   **https://bpupadhyaya.github.io/global-monetary-systems-site/**. All internal links are
-   relative, so a custom domain can be added later (a `CNAME` file + DNS, same pattern as
+1. **GitHub → repo Settings → Pages**: Source = `main` branch, `/ (root)`. Done — Pages is
+   enabled and building.
+2. No dedicated custom domain yet — "Global Monetary Systems" is still a working title
+   (`CLAUDE.md` in the app repo; `docs/RECIPES.md` has the rename procedure). Because this
+   repo has no `CNAME` of its own, it automatically inherits `bpupadhyaya.github.io`'s
+   custom domain, so it's live at
+   **https://equalinformation.com/global-monetary-systems-site/** (also reachable, via
+   redirect, at **https://bpupadhyaya.github.io/global-monetary-systems-site/**) — same
+   pattern as `global-intelligence-site`. All internal links are relative, so a dedicated
+   custom domain can be added later (a `CNAME` file + DNS, same pattern as
    `nutrisize-health-site`) without breaking anything.
 
 ## Store links
