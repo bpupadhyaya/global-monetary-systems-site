@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How Money Actually Moves — Global Monetary Systems</title>
+    <title>Simulate a Payment — Global Monetary Systems</title>
     <meta name="description" content="An interactive network diagram and step-by-step simulation of how an international payment actually travels — SWIFT, correspondent banks, Fedwire, TARGET2, the Fed, the ECB, the IMF, the World Bank and the BIS, all in one map.">
-    <link rel="canonical" href="https://equalinformation.com/global-monetary-systems-site/flows/">
-    <meta property="og:title" content="How Money Actually Moves — Global Monetary Systems">
+    <link rel="canonical" href="https://equalinformation.com/global-monetary-systems-site/simulate/">
+    <meta property="og:title" content="Simulate a Payment — Global Monetary Systems">
     <meta property="og:description" content="Watch a real international payment travel through SWIFT, correspondent banks, and central-bank settlement systems — an interactive map of the whole global payment network.">
-    <meta property="og:url" content="https://equalinformation.com/global-monetary-systems-site/flows/">
+    <meta property="og:url" content="https://equalinformation.com/global-monetary-systems-site/simulate/">
     <meta property="og:image" content="https://equalinformation.com/global-monetary-systems-site/assets/img/og-image.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Global Monetary Systems">
@@ -18,9 +18,9 @@
     <meta name="theme-color" content="#0b3d2e">
     <link rel="stylesheet" href="../assets/fonts/inter.css">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/flows.css">
+    <link rel="stylesheet" href="../assets/css/simulate.css">
     <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
-    <script src="../assets/js/flows.js" defer></script>
+    <script src="../assets/js/simulate.js" defer></script>
 </head>
 <body>
 
@@ -34,14 +34,14 @@
             <li><a href="../explore/">Explore</a></li>
             <li><a href="../glossary/">Glossary</a></li>
             <li><a href="../signals/">Signals</a></li>
-            <li><a href="./" style="color: var(--green-700); font-weight: 700;">Flows</a></li>
+            <li><a href="./" style="color: var(--green-700); font-weight: 700;">Simulate</a></li>
             <li><a href="../about/">About</a></li>
             <li><a href="../#download" class="nav-cta">Get the App</a></li>
         </ul>
         <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">&#9776;</button>
     </div>
 </nav>
-<div class="crumbs" role="navigation" aria-label="Breadcrumb"><div class="wrap"><a href="../">Home</a><span class="sep">&rsaquo;</span><span class="current">Flows</span></div></div>
+<div class="crumbs" role="navigation" aria-label="Breadcrumb"><div class="wrap"><a href="../">Home</a><span class="sep">&rsaquo;</span><span class="current">Simulate</span></div></div>
 
 <header class="hero hero-sub">
     <div class="wrap">
@@ -53,12 +53,18 @@
             banks that do the actual work &mdash; laid out as one network, with a step-by-step
             simulation of a real international payment moving through it.
         </p>
+        <div class="stats">
+            <div class="stat"><div class="num">20</div><div class="label">Institutions mapped</div></div>
+            <div class="stat"><div class="num">5</div><div class="label">Real hops, this payment</div></div>
+            <div class="stat"><div class="num">4</div><div class="label">Systems that settle money</div></div>
+            <div class="stat"><div class="num">1</div><div class="label">Network that just sends messages</div></div>
+        </div>
     </div>
 </header>
 
 <section>
     <div class="wrap">
-        <div class="flows-insight">
+        <div class="sim-insight">
             <strong>The one thing most explanations get wrong:</strong> SWIFT carries payment
             <em>instructions</em>, never money. A dollar or a euro only ever moves by debiting
             one account and crediting another, inside that currency's own real-time settlement
@@ -66,25 +72,25 @@
             actually happens.
         </div>
 
-        <div class="flows-layout">
+        <div class="sim-layout">
             <div>
-                <div class="flows-stage">
-                    <svg id="flows-svg"></svg>
-                    <div class="flows-zoombar">
-                        <button id="flows-zoom-in" aria-label="Zoom in" type="button">+</button>
-                        <button id="flows-zoom-out" aria-label="Zoom out" type="button">&minus;</button>
-                        <button id="flows-zoom-reset" aria-label="Reset view" type="button">&#8634;</button>
+                <div class="sim-stage">
+                    <svg id="sim-svg"></svg>
+                    <div class="sim-zoombar">
+                        <button id="sim-zoom-in" aria-label="Zoom in" type="button">+</button>
+                        <button id="sim-zoom-out" aria-label="Zoom out" type="button">&minus;</button>
+                        <button id="sim-zoom-reset" aria-label="Reset view" type="button">&#8634;</button>
                     </div>
-                    <div class="flows-controls">
-                        <button id="flows-play" class="primary" type="button">&#9654; Play</button>
-                        <button id="flows-prev" type="button">&larr; Prev</button>
-                        <button id="flows-next" type="button">Next &rarr;</button>
-                        <button id="flows-reset" type="button">Reset</button>
-                        <div class="flows-steps" aria-hidden="true">
+                    <div class="sim-controls">
+                        <button id="sim-play" class="primary" type="button">&#9654; Play</button>
+                        <button id="sim-prev" type="button">&larr; Prev</button>
+                        <button id="sim-next" type="button">Next &rarr;</button>
+                        <button id="sim-reset" type="button">Reset</button>
+                        <div class="sim-steps" aria-hidden="true">
                             <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
                         </div>
                     </div>
-                    <div class="flows-caption" id="flows-caption" aria-live="polite"></div>
+                    <div class="sim-caption" id="sim-caption" aria-live="polite"></div>
                 </div>
                 <p class="tool-note" style="margin-top: 14px; color: var(--ink-faint); font-size: 13px;">
                     Scenario: a U.S. business pays a &euro;10,000 invoice to a supplier in
@@ -96,7 +102,7 @@
             </div>
 
             <div>
-                <div class="flows-legend">
+                <div class="sim-legend">
                     <h4>Institutions</h4>
                     <div class="row"><span class="sw" style="background:#e5f0fa;border:2px solid #0b4f8a;"></span> Global institutions (IMF, World Bank, BIS, Treasury)</div>
                     <div class="row"><span class="sw" style="background:#e3f5ec;border:2px solid #14684c;"></span> Central banks</div>
@@ -110,7 +116,7 @@
                     <div class="row"><span class="ln dash"></span> Oversight &amp; cooperation (not a payment hop)</div>
                 </div>
 
-                <div class="flows-panel" id="flows-panel">
+                <div class="sim-panel" id="sim-panel">
                     <div class="ph">Tap any institution</div>
                     <h3>What does it actually do?</h3>
                     <p>Click any node in the diagram &mdash; including ones the simulation never lights up, like the IMF or the World Bank &mdash; for a plain-language explanation of its real role.</p>
@@ -166,7 +172,7 @@
             <li><a href="../explore/">Explore</a></li>
             <li><a href="../glossary/">Glossary</a></li>
             <li><a href="../signals/">Signals</a></li>
-            <li><a href="./">Flows</a></li>
+            <li><a href="./">Simulate</a></li>
             <li><a href="../about/">About</a></li>
             <li><a href="../privacy/">Privacy Policy</a></li>
             <li><a href="../disclaimer/">Disclaimer</a></li>

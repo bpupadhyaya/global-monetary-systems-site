@@ -1,0 +1,118 @@
+/* Global Monetary Systems — "Simulate a Payment" network + flow simulation.
+   Builds on style.css tokens (nutrisize palette). D3 draws into #sim-svg;
+   this file styles the surrounding chrome, legend, panel, and the node/edge
+   look (rounded card-style nodes + an animated flowing ribbon for the
+   active payment path, in the spirit of a polished product dashboard). */
+
+.sim-layout {
+    display: grid; grid-template-columns: 1fr 300px; gap: 22px; align-items: start;
+}
+@media (max-width: 980px) { .sim-layout { grid-template-columns: 1fr; } }
+
+.sim-stage {
+    background:
+        radial-gradient(900px 420px at 15% -10%, var(--green-100) 0%, transparent 55%),
+        radial-gradient(900px 420px at 100% 110%, var(--blue-100) 0%, transparent 55%),
+        #fff;
+    border: 1px solid var(--line); border-radius: 20px;
+    box-shadow: var(--shadow); overflow: hidden; position: relative;
+}
+.sim-stage svg { width: 100%; height: auto; display: block; touch-action: none; cursor: grab; }
+.sim-stage svg:active { cursor: grabbing; }
+
+.sim-zoombar { position: absolute; top: 16px; right: 16px; display: flex; flex-direction: column; gap: 6px; }
+.sim-zoombar button {
+    width: 32px; height: 32px; border-radius: 10px; border: 1px solid var(--line);
+    background: #fff; color: var(--ink-soft); font-size: 16px; font-weight: 700; cursor: pointer;
+    box-shadow: var(--shadow);
+}
+.sim-zoombar button:hover { background: var(--paper-tint); color: var(--green-700); }
+
+.sim-controls {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    padding: 16px 20px; border-top: 1px solid var(--line); background: rgba(244,250,247,0.7);
+    backdrop-filter: blur(6px);
+}
+.sim-controls button {
+    display: inline-flex; align-items: center; gap: 6px; font: inherit; font-weight: 700;
+    font-size: 13.5px; color: var(--green-700); background: #fff; border: 1px solid var(--line);
+    border-radius: 999px; padding: 9px 18px; cursor: pointer; transition: border-color .15s, transform .1s;
+}
+.sim-controls button:hover { border-color: var(--green-500); }
+.sim-controls button:active { transform: scale(0.97); }
+.sim-controls button.primary { background: var(--green-600); color: #fff; border-color: var(--green-600); box-shadow: 0 3px 10px rgba(23,138,94,0.3); }
+.sim-controls button.primary:hover { background: var(--green-700); }
+.sim-controls button:disabled { opacity: 0.4; cursor: default; }
+.sim-steps { display: flex; gap: 5px; margin-left: auto; }
+.sim-steps .dot {
+    width: 9px; height: 9px; border-radius: 50%; background: var(--line); display: inline-block;
+    transition: background .2s, transform .2s;
+}
+.sim-steps .dot.done { background: var(--green-500); }
+.sim-steps .dot.active { background: var(--green-700); transform: scale(1.35); box-shadow: 0 0 0 4px rgba(31,169,113,.2); }
+
+.sim-caption {
+    padding: 18px 20px 20px; border-top: 1px solid var(--line); min-height: 70px; background: #fff;
+}
+.sim-caption .step-k { font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--green-600); }
+.sim-caption .step-t { margin-top: 5px; font-size: 16.5px; color: var(--green-900); font-weight: 700; }
+.sim-caption .step-d { margin-top: 5px; font-size: 13.5px; color: var(--ink-soft); line-height: 1.6; }
+
+.sim-legend {
+    background: #fff; border: 1px solid var(--line); border-radius: 18px;
+    box-shadow: var(--shadow); padding: 20px 22px;
+}
+.sim-legend h4 { font-size: 11.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 12px; }
+.sim-legend .row { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: var(--ink-soft); margin: 9px 0; }
+.sim-legend .sw { width: 14px; height: 14px; border-radius: 6px; flex: none; }
+.sim-legend .ln { width: 22px; height: 0; border-top: 2.5px solid var(--ink-faint); flex: none; border-radius: 2px; }
+.sim-legend .ln.dash { border-top-style: dashed; }
+.sim-legend hr { border: none; border-top: 1px solid var(--line); margin: 14px 0; }
+
+.sim-panel {
+    background: #fff; border: 1px solid var(--line); border-radius: 18px;
+    box-shadow: var(--shadow); padding: 22px 24px; margin-top: 18px; min-height: 130px;
+}
+.sim-panel .ph { font-size: 11.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--green-600); }
+.sim-panel h3 { margin-top: 7px; font-size: 18px; color: var(--green-900); }
+.sim-panel p { margin-top: 9px; font-size: 14px; color: var(--ink-soft); line-height: 1.6; }
+.sim-panel .hint { color: var(--ink-faint); font-size: 13px; margin-top: 2px; }
+
+.sim-insight {
+    background: linear-gradient(120deg, var(--blue-100), var(--green-100));
+    border: 1px solid #cfe3e6; border-radius: 18px;
+    padding: 20px 24px; margin: 26px 0; color: var(--green-900); font-size: 15px; line-height: 1.65;
+}
+.sim-insight strong { color: var(--blue-700); }
+
+/* ---------- SVG node/edge look ---------- */
+.sim-stage text { font-family: 'Inter', sans-serif; pointer-events: none; user-select: none; }
+.sim-tier-label { font-size: 11px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; fill: var(--ink-faint); }
+
+.sim-node { cursor: pointer; }
+.sim-node .chip {
+    transition: transform .18s cubic-bezier(.2,.8,.3,1.3), filter .18s;
+    transform-box: fill-box; transform-origin: center;
+}
+.sim-node:hover .chip, .sim-node.active .chip { transform: translateY(-2px) scale(1.045); }
+.sim-node .halo {
+    fill: none; stroke-width: 3px; opacity: 0; transition: opacity .2s;
+    transform-box: fill-box; transform-origin: center;
+}
+.sim-node.active .halo, .sim-node:hover .halo { opacity: 1; }
+
+/* The active payment path renders as a flowing, animated ribbon —
+   marching dashes to read as motion, not a static line. */
+.sim-edge-flow {
+    stroke-linecap: round;
+}
+.sim-edge-flow.on {
+    animation: sim-marching 0.9s linear infinite;
+}
+@keyframes sim-marching {
+    to { stroke-dashoffset: -28; }
+}
+
+.sim-token {
+    filter: drop-shadow(0 2px 4px rgba(11,61,46,0.35));
+}
