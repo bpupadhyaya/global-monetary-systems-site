@@ -17,7 +17,7 @@ only covers the site's own structure and deploy mechanics.
 | `privacy/` | Privacy policy (mirrors `privacy-globalmonetarysystems.html` on equalinformation.com) |
 | `disclaimer/` | "Explains, never advises" — not financial/legal/investment advice |
 | `support/` | Contact + FAQ + live store-status notice |
-| `assets/css/style.css` | "Atlas · Green" theme (DESIGN.md §10 in the app repo): `#0E6B45` display green, navy `#00193C`/gold `#F3D58D`/teal `#56A5B2` from the app icon, DM Serif Display + DM Sans |
+| `assets/css/style.css` | Palette and type copied literally from `nutrisize-health-site`: clinical blue + green, self-hosted Inter (`assets/fonts/`) |
 | `assets/img/screens/` | Real submission screenshots, copied from `release-ops/global-monetary-systems/store-assets/screenshots-ios-phone/` |
 | `assets/data/*.json` | Generated data (glossary, live-series snapshot) — see "Keeping content in sync" below |
 | `scripts/` | The two sync scripts that regenerate `assets/data/*.json` from the app repo |
