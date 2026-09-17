@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Money Actually Moves — Global Monetary Systems</title>
+    <meta name="description" content="An interactive network diagram and step-by-step simulation of how an international payment actually travels — SWIFT, correspondent banks, Fedwire, TARGET2, the Fed, the ECB, the IMF, the World Bank and the BIS, all in one map.">
+    <link rel="canonical" href="https://equalinformation.com/global-monetary-systems-site/flows/">
+    <meta property="og:title" content="How Money Actually Moves — Global Monetary Systems">
+    <meta property="og:description" content="Watch a real international payment travel through SWIFT, correspondent banks, and central-bank settlement systems — an interactive map of the whole global payment network.">
+    <meta property="og:url" content="https://equalinformation.com/global-monetary-systems-site/flows/">
+    <meta property="og:image" content="https://equalinformation.com/global-monetary-systems-site/assets/img/og-image.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Global Monetary Systems">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#0b3d2e">
+    <link rel="stylesheet" href="../assets/fonts/inter.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/flows.css">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
+    <script src="../assets/js/flows.js" defer></script>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="../" class="nav-logo">
+            <img src="../assets/img/favicon.png" alt="" width="32" height="32">
+            Global Monetary Systems
+        </a>
+        <ul class="nav-links">
+            <li><a href="../explore/">Explore</a></li>
+            <li><a href="../glossary/">Glossary</a></li>
+            <li><a href="../signals/">Signals</a></li>
+            <li><a href="./" style="color: var(--green-700); font-weight: 700;">Flows</a></li>
+            <li><a href="../about/">About</a></li>
+            <li><a href="../#download" class="nav-cta">Get the App</a></li>
+        </ul>
+        <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">&#9776;</button>
+    </div>
+</nav>
+<div class="crumbs" role="navigation" aria-label="Breadcrumb"><div class="wrap"><a href="../">Home</a><span class="sep">&rsaquo;</span><span class="current">Flows</span></div></div>
+
+<header class="hero hero-sub">
+    <div class="wrap">
+        <h1>How money <span class="accent">actually moves.</span></h1>
+        <p class="tagline">Every major institution and system, on one map — then watch a real payment travel through it.</p>
+        <p class="lede">
+            IMF, World Bank, BIS, the U.S. Treasury, the Federal Reserve, the ECB and the
+            world's other central banks, SWIFT, and the settlement systems and correspondent
+            banks that do the actual work &mdash; laid out as one network, with a step-by-step
+            simulation of a real international payment moving through it.
+        </p>
+    </div>
+</header>
+
+<section>
+    <div class="wrap">
+        <div class="flows-insight">
+            <strong>The one thing most explanations get wrong:</strong> SWIFT carries payment
+            <em>instructions</em>, never money. A dollar or a euro only ever moves by debiting
+            one account and crediting another, inside that currency's own real-time settlement
+            system, in central-bank money. Press Play below and watch exactly where that
+            actually happens.
+        </div>
+
+        <div class="flows-layout">
+            <div>
+                <div class="flows-stage">
+                    <svg id="flows-svg"></svg>
+                    <div class="flows-zoombar">
+                        <button id="flows-zoom-in" aria-label="Zoom in" type="button">+</button>
+                        <button id="flows-zoom-out" aria-label="Zoom out" type="button">&minus;</button>
+                        <button id="flows-zoom-reset" aria-label="Reset view" type="button">&#8634;</button>
+                    </div>
+                    <div class="flows-controls">
+                        <button id="flows-play" class="primary" type="button">&#9654; Play</button>
+                        <button id="flows-prev" type="button">&larr; Prev</button>
+                        <button id="flows-next" type="button">Next &rarr;</button>
+                        <button id="flows-reset" type="button">Reset</button>
+                        <div class="flows-steps" aria-hidden="true">
+                            <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="flows-caption" id="flows-caption" aria-live="polite"></div>
+                </div>
+                <p class="tool-note" style="margin-top: 14px; color: var(--ink-faint); font-size: 13px;">
+                    Scenario: a U.S. business pays a &euro;10,000 invoice to a supplier in
+                    Frankfurt &mdash; the ordinary case where sender and receiver bank in
+                    different currencies with no direct relationship. Drag to pan, scroll or
+                    pinch to zoom, and click any node any time &mdash; not just the ones lit up
+                    mid-simulation.
+                </p>
+            </div>
+
+            <div>
+                <div class="flows-legend">
+                    <h4>Institutions</h4>
+                    <div class="row"><span class="sw" style="background:#e5f0fa;border:2px solid #0b4f8a;"></span> Global institutions (IMF, World Bank, BIS, Treasury)</div>
+                    <div class="row"><span class="sw" style="background:#e3f5ec;border:2px solid #14684c;"></span> Central banks</div>
+                    <div class="row"><span class="sw" style="background:#fdecd3;border:2px solid #d97706;"></span> Messaging &amp; settlement systems</div>
+                    <div class="row"><span class="sw" style="background:#f4faf7;border:2px solid #40544a;"></span> Commercial &amp; correspondent banks</div>
+                    <div class="row"><span class="sw" style="background:#fff;border:2px solid #6b7f74;"></span> Who actually asked for this</div>
+                    <hr>
+                    <h4>Connections</h4>
+                    <div class="row"><span class="ln" style="border-color:#178a5e;"></span> This payment's actual path</div>
+                    <div class="row"><span class="ln" style="border-color:#6b7f74;"></span> Operates / runs</div>
+                    <div class="row"><span class="ln dash"></span> Oversight &amp; cooperation (not a payment hop)</div>
+                </div>
+
+                <div class="flows-panel" id="flows-panel">
+                    <div class="ph">Tap any institution</div>
+                    <h3>What does it actually do?</h3>
+                    <p>Click any node in the diagram &mdash; including ones the simulation never lights up, like the IMF or the World Bank &mdash; for a plain-language explanation of its real role.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="tint">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="kicker">Why this matters</span>
+            <h2>The map, not just the animation</h2>
+            <p>A single payment only touches a handful of these nodes. The rest are the architecture that makes the whole system possible &mdash; worth understanding even when they're not on today's path.</p>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <div class="icon">&#128225;</div>
+                <h3>Messaging &ne; money</h3>
+                <p>SWIFT is a secure messaging network linking over 11,000 banks. It's often mistaken for a payments system — it isn't one. Every settlement above happens somewhere else.</p>
+            </div>
+            <div class="card">
+                <div class="icon blue">&#127760;</div>
+                <h3>Every currency, one pattern</h3>
+                <p>Dollars settle at the Fed via Fedwire. Euros settle at the ECB via TARGET2. Every other currency on earth follows the identical pattern with its own central bank and system.</p>
+            </div>
+            <div class="card">
+                <div class="icon gold">&#127970;</div>
+                <h3>The architecture above it</h3>
+                <p>The IMF, World Bank, and BIS never touch an individual payment — they keep the system itself solvent, coordinated, and standardized so the pattern above keeps working.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="wrap">
+        <div class="section-head">
+            <span class="kicker">One diagram, many payments</span>
+            <h2>This is one scenario out of thousands the app covers</h2>
+            <p>Sanctioned countries losing SWIFT access, CBDCs bypassing correspondent banks entirely, how a currency crisis changes this picture &mdash; the app covers the mechanics, the history, and the current state of every piece on this map, sourced to the IMF, World Bank, BIS, and national central banks themselves.</p>
+        </div>
+        <div style="display:flex; justify-content:center;">
+            <a class="btn" href="../explore/">Explore the full module map &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-inner">
+        <ul class="footer-links">
+            <li><a href="../explore/">Explore</a></li>
+            <li><a href="../glossary/">Glossary</a></li>
+            <li><a href="../signals/">Signals</a></li>
+            <li><a href="./">Flows</a></li>
+            <li><a href="../about/">About</a></li>
+            <li><a href="../privacy/">Privacy Policy</a></li>
+            <li><a href="../disclaimer/">Disclaimer</a></li>
+            <li><a href="../support/">Support</a></li>
+            <li><a href="https://equalinformation.com" target="_blank" rel="noopener">EqualInformation</a></li>
+        </ul>
+        <p class="footer-copy">
+            Contact: <a href="mailto:support@equalinformation.com">support@equalinformation.com</a><br>
+            &copy; 2026 EqualInformation, LLC. All rights reserved.<br>
+            This diagram simplifies a real, working payment system for clarity &mdash; specific banks, routing choices, and timings vary by transaction. Not financial or legal advice. <a href="../disclaimer/">Read the disclaimer</a>.
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

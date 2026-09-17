@@ -13,6 +13,7 @@ only covers the site's own structure and deploy mechanics.
 | `explore/` | The 20-module map (mirrors the app's Explore tab), with real page titles as teasers |
 | `glossary/` | All 100 glossary terms, Essentials definitions only, searchable — generated from the app's own `content/glossary.yaml` |
 | `signals/` | A periodic snapshot of the same live official series (ECB/World Bank/BIS) the app fetches |
+| `flows/` | **"How Money Actually Moves"** — an interactive D3 network diagram of IMF/World Bank/BIS/Treasury/Fed/central banks/SWIFT/correspondent banks/RTGS systems, with a 5-step simulation of a real cross-border payment. The site's first "larger-screen visualization" (`DESIGN.md` §21's future-direction item) — see `assets/js/flows.js` |
 | `about/` | Mission, the three-layer model, Pro, sourcing policy, on-device AI |
 | `privacy/` | Privacy policy (mirrors `privacy-globalmonetarysystems.html` on equalinformation.com) |
 | `disclaimer/` | "Explains, never advises" — not financial/legal/investment advice |
@@ -22,8 +23,9 @@ only covers the site's own structure and deploy mechanics.
 | `assets/data/*.json` | Generated data (glossary, live-series snapshot) — see "Keeping content in sync" below |
 | `scripts/` | The two sync scripts that regenerate `assets/data/*.json` from the app repo |
 
-Plain static HTML/CSS/vanilla JS — no build step, no framework. Edit, commit, push to `main`;
-GitHub Pages deploys automatically.
+Plain static HTML/CSS/vanilla JS, no build step — one deliberate exception: `flows/` loads
+D3.js from jsdelivr (`assets/js/flows.js`) as a plain `<script>` tag, still no bundler. Edit,
+commit, push to `main`; GitHub Pages deploys automatically.
 
 ## Keeping content in sync with the app
 
