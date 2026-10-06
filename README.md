@@ -64,11 +64,7 @@ materially (check the app repo's `CLAUDE.md` status line and `release-ops/global
 
 ## Store links
 
-The app is submitted for review on both stores (2026-09-16/17) but not yet live, so the home
-page's App Store / Google Play badges are currently **non-clickable, styled as pending** with
-an explicit "in review" note — not links to store pages that don't exist yet. Once each
-listing goes live, wire the badges to the real URLs (see `release-ops/global-monetary-systems/README.md`
-for IDs) in `index.html`'s `.store-buttons.pending` block and drop the `pending` class/note.
+Android went **live on Google Play 2026-10-06** (https://play.google.com/store/apps/details?id=com.equalinformation.globalmonetarysystems.app); the home page's Play badge links to it and the support notice says so. iOS is still in review (4.3 rejection answered 2026-10-05), so the App Store badge stays non-clickable and greyed. When iOS goes live, wire that badge to the store URL, drop the grey inline style, and update the note and `support/index.html`.
 
 ## Related
 
